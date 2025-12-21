@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(open:*)",
+      "Bash(echo:*)",
+      "Bash(cat:*)",
+      "Bash(chmod:*)",
+      "Bash(./convert_to_webp.sh)",
+      "Bash(du:*)",
+      "Bash(brew install:*)",
+      "Bash(npx csso:*)",
+      "Bash(npm install:*)",
+      "Bash(csso:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
