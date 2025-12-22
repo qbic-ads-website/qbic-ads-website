@@ -239,7 +239,7 @@ const translations = {
         // Hero Section
         'hero.title': '<span class="hero-text-blue">Запускаем и ведем</span> <span class="highlight-google">Google Ads <img src="images/googleads.webp" alt="Google Ads" class="google-ads-icon"></span> <span class="hero-text-blue">для ecommerce и сервисных компаний с фокусом на прибыль</span> <img src="images/cube.webp" alt="" class="hero-title-cube">',
         'hero.subtitle': 'Google Ads полного цикла для онлайн-бизнеса в Европе и США.<br>От стратегии до масштабирования.',
-        'hero.badge': 'Без долгих договоров — ежемесячная оплата, прозрачная отчетность',
+        'hero.badge': 'Без долгих договоров — ежемесячная оплата, прозрачная отчетность.',
         'hero.cta1': 'Получить бесплатный аудит',
         'hero.cta2': 'Написать в Telegram',
 
@@ -688,7 +688,7 @@ const translations = {
         // Hero Section
         'hero.title': '<span class="hero-text-blue">Запускаємо та ведемо</span> <span class="highlight-google">Google Ads <img src="images/googleads.webp" alt="Google Ads" class="google-ads-icon"></span> <span class="hero-text-blue">для ecommerce та сервісних компаній з фокусом на прибуток</span> <img src="images/cube.webp" alt="" class="hero-title-cube">',
         'hero.subtitle': 'Google Ads повного циклу для онлайн-бізнесу в Європі та США.<br>Від стратегії до масштабування.',
-        'hero.badge': 'Без довгих договорів — щомісячна оплата, прозора звітність',
+        'hero.badge': 'Без довгих договорів — щомісячна оплата, прозора звітність.',
         'hero.cta1': 'Отримати безкоштовний аудит',
         'hero.cta2': 'Написати в Telegram',
 
