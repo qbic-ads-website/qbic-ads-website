@@ -11,7 +11,11 @@
       "Bash(brew install:*)",
       "Bash(npx csso:*)",
       "Bash(npm install:*)",
-      "Bash(csso:*)"
+      "Bash(csso:*)",
+      "Bash(npx terser:*)",
+      "Bash(sort:*)",
+      "Bash(sips:*)",
+      "Bash(python3:*)"
     ],
     "deny": [],
     "ask": []
