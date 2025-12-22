@@ -44,5 +44,12 @@ Desktop.ini
 *.bak
 *.backup
 
+# Original images (before optimization)
+*.original.webp
+
+# Optimization scripts
+optimize_images.py
+
 # Server config files (not needed for GitHub Pages)
 .htaccess
+_headers
