@@ -54,10 +54,10 @@
         opacity: 0;
     }
     10% {
-        opacity: 0.35;
+        opacity: 0.7;
     }
     90% {
-        opacity: 0.35;
+        opacity: 0.7;
     }
     100% {
         transform: translateY(100vh) rotate(720deg);
@@ -2598,6 +2598,14 @@ select.form-input {
     }
 
     .hero-title-cube {
+        display: inline-block;
+        margin-left: 8px;
+        vertical-align: middle;
+    }
+
+    /* Для русской и украинской версий - кубик по центру на новой строке */
+    html[lang="ru"] .hero-title-cube,
+    html[lang="ua"] .hero-title-cube {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -2793,16 +2801,32 @@ select.form-input {
     .floating-buttons {
         right: 20px;
         bottom: 20px;
+        display: flex !important;
+        gap: 10px;
     }
 
     .floating-btn {
-        width: 50px;
-        height: 50px;
+        width: 42px;
+        height: 42px;
+        display: flex !important;
+    }
+
+    .floating-btn svg {
+        width: 20px;
+        height: 20px;
     }
 
     .falling-cube {
         width: 19px;
         height: 19px;
+    }
+
+    .pricing-amount {
+        font-size: 20px !important;
+    }
+
+    .pricing-period {
+        font-size: 18px !important;
     }
 
     .messenger-links {

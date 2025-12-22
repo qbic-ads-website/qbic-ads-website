@@ -366,7 +366,7 @@ const translations = {
         // Pricing
         'pricing.title': 'Тарифы',
 
-        'price1.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">START',
+        'price1.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">СТАРТ',
         'price1.desc': 'Для первого запуска или перезапуска после неудачных попыток',
         'price1.budget': 'Рекламный бюджет до $1,000/месяц',
         'price1.amount': 'от $300',
@@ -374,7 +374,7 @@ const translations = {
         'price1.cta': 'Начать',
 
         'price2.badge': 'Популярный',
-        'price2.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">SCALE',
+        'price2.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">МАСШТАБ',
         'price2.desc': 'Для растущих компаний, готовых масштабировать выручку',
         'price2.budget': 'Рекламный бюджет $1,000-5,000/месяц',
         'price2.amount': 'от $400',
@@ -815,7 +815,7 @@ const translations = {
         // Pricing
         'pricing.title': 'Тарифи',
 
-        'price1.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">START',
+        'price1.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">СТАРТ',
         'price1.desc': 'Для першого запуску або перезапуску після невдалих спроб',
         'price1.budget': 'Рекламний бюджет до $1,000/місяць',
         'price1.amount': 'від $300',
@@ -823,7 +823,7 @@ const translations = {
         'price1.cta': 'Розпочати',
 
         'price2.badge': 'Популярний',
-        'price2.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">SCALE',
+        'price2.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">МАСШТАБ',
         'price2.desc': 'Для компаній, що ростуть і готові масштабувати виручку',
         'price2.budget': 'Рекламний бюджет $1,000-5,000/місяць',
         'price2.amount': 'від $400',
@@ -1025,15 +1025,28 @@ function translatePage(lang) {
                 element.insertBefore(icon, element.firstChild);
             }
 
-            // Исправляем пути к изображениям - делаем их абсолютными от корня
+            // Исправляем пути изображений и принудительно перезагружаем
             element.querySelectorAll('img').forEach(img => {
-                if (img.src && !img.src.startsWith('http')) {
-                    const currentSrc = img.getAttribute('src');
-                    if (currentSrc && !currentSrc.startsWith('/') && !currentSrc.startsWith('http')) {
-                        // Получаем базовый URL без пути
-                        const baseUrl = window.location.origin;
-                        img.src = baseUrl + '/' + currentSrc;
-                    }
+                const srcAttr = img.getAttribute('src');
+                if (srcAttr) {
+                    // Сохраняем текущий src
+                    const currentSrc = img.src;
+
+                    // Сбрасываем src для принудительной перезагрузки
+                    img.src = '';
+
+                    // Принудительно запускаем reflow для гарантированного применения изменений
+                    void img.offsetWidth;
+
+                    // Восстанавливаем src обратно
+                    img.src = srcAttr;
+
+                    // Добавляем обработчик ошибки для отладки
+                    img.onerror = function() {
+                        console.warn('Failed to load image:', srcAttr);
+                        // Пробуем загрузить еще раз без кеша
+                        this.src = srcAttr + (srcAttr.includes('?') ? '&' : '?') + 'retry=' + Date.now();
+                    };
                 }
             });
         }
