@@ -32,9 +32,10 @@ function detectBrowserLanguage() {
     // Map browser language to supported languages
     if (langCode === 'ru') return 'ru';
     if (langCode === 'uk' || langCode === 'ua') return 'ua';
+    if (langCode === 'en') return 'en';
 
-    // Default to Russian for other languages
-    return 'ru';
+    // Default to English for other languages
+    return 'en';
 }
 
 // Get current language from URL parameter, localStorage, or browser language

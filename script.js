@@ -908,9 +908,10 @@ function detectBrowserLanguage() {
     // Map browser language to supported languages
     if (langCode === 'ru') return 'ru';
     if (langCode === 'uk' || langCode === 'ua') return 'ua';
+    if (langCode === 'en') return 'en';
 
-    // Default to Russian for other languages
-    return 'ru';
+    // Default to English for other languages
+    return 'en';
 }
 
 // Detect language from URL query parameter
