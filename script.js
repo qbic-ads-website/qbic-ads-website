@@ -913,15 +913,8 @@ function detectBrowserLanguage() {
     return 'ru';
 }
 
-// Detect language from URL path or query parameter
+// Detect language from URL query parameter
 function getLanguageFromURL() {
-    // Check URL path first (e.g., /ru/, /ua/)
-    const path = window.location.pathname;
-    const pathMatch = path.match(/^\/(ru|ua)\/?/);
-    if (pathMatch) {
-        return pathMatch[1];
-    }
-
     // Check URL query parameter (e.g., ?lang=ru)
     const urlParams = new URLSearchParams(window.location.search);
     const langParam = urlParams.get('lang');
@@ -970,11 +963,11 @@ if (langBtn && langOptions.length > 0) {
 function updateURL(lang) {
     let newURL;
     if (lang === 'en') {
-        // English version - root domain
+        // English version - root domain without query param
         newURL = window.location.origin + '/';
     } else {
-        // Other languages - use path prefix
-        newURL = window.location.origin + '/' + lang + '/';
+        // Other languages - use query parameter
+        newURL = window.location.origin + '/?lang=' + lang;
     }
 
     // Update URL without page reload using History API
@@ -1078,12 +1071,12 @@ window.addEventListener('DOMContentLoaded', () => {
     // Always initialize language to ensure page is translated
     switchLanguage(detectedLang);
 
-    // Update URL if needed (in case language came from localStorage)
+    // Update URL if needed (in case language came from localStorage or browser detection)
     const urlParams = new URLSearchParams(window.location.search);
     const hasLangParam = urlParams.has('lang');
 
-    // Only update URL if we're not on a language-specific path and not using query param
-    if (!window.location.pathname.match(/^\/(ru|ua)/) && !hasLangParam && detectedLang !== 'en') {
+    // Only update URL if there's no query param and language is not default (en)
+    if (!hasLangParam && detectedLang !== 'en') {
         updateURL(detectedLang);
     }
 });
