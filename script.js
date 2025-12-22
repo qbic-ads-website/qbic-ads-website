@@ -1029,24 +1029,30 @@ function translatePage(lang) {
             element.querySelectorAll('img').forEach(img => {
                 const srcAttr = img.getAttribute('src');
                 if (srcAttr) {
-                    // Сохраняем текущий src
-                    const currentSrc = img.src;
+                    // Метод 1: Полный сброс и перезагрузка
+                    img.removeAttribute('src');
 
-                    // Сбрасываем src для принудительной перезагрузки
-                    img.src = '';
-
-                    // Принудительно запускаем reflow для гарантированного применения изменений
+                    // Принудительный reflow
                     void img.offsetWidth;
 
-                    // Восстанавливаем src обратно
-                    img.src = srcAttr;
+                    // Используем requestAnimationFrame для гарантии на мобильных
+                    requestAnimationFrame(() => {
+                        img.setAttribute('src', srcAttr);
 
-                    // Добавляем обработчик ошибки для отладки
-                    img.onerror = function() {
-                        console.warn('Failed to load image:', srcAttr);
-                        // Пробуем загрузить еще раз без кеша
-                        this.src = srcAttr + (srcAttr.includes('?') ? '&' : '?') + 'retry=' + Date.now();
-                    };
+                        // Обработчик успешной загрузки
+                        img.onload = function() {
+                            this.style.opacity = '1';
+                        };
+
+                        // Обработчик ошибки с автоповтором
+                        img.onerror = function() {
+                            console.warn('Image load failed, retrying:', srcAttr);
+                            // Убираем параметры кеша из URL если есть
+                            const cleanSrc = srcAttr.split('?')[0];
+                            // Добавляем timestamp для обхода кеша
+                            this.src = cleanSrc + '?t=' + Date.now();
+                        };
+                    });
                 }
             });
         }
