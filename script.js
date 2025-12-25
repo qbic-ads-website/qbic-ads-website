@@ -1123,12 +1123,29 @@ if (contactForm) {
             // Send to Telegram
             await sendToTelegram(formData);
 
+            // Push form submission event to GTM dataLayer
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'form_submission',
+                'formName': 'contact_form',
+                'formData': {
+                    'name': formData.name,
+                    'contact': formData.contact,
+                    'company': formData.company,
+                    'market': formData.market
+                }
+            });
+
+            console.log('✅ Form submission event pushed to GTM dataLayer');
+
             // Reset form
             contactForm.reset();
 
-            // Redirect to thank you page with current language
+            // Wait for GTM to process the event before redirecting
             const currentLang = localStorage.getItem('selectedLanguage') || 'en';
-            window.location.href = `thankyou.html?lang=${currentLang}`;
+            setTimeout(() => {
+                window.location.href = `thankyou.html?lang=${currentLang}`;
+            }, 500);
 
         } catch (error) {
             console.error('Error:', error);
