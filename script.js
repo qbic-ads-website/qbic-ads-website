@@ -369,7 +369,7 @@ const translations = {
         'price1.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">СТАРТ',
         'price1.desc': 'Для первого запуска или перезапуска после неудачных попыток',
         'price1.budget': 'Рекламный бюджет до $1,000/месяц',
-        'price1.amount': 'от $300',
+        'price1.amount': 'от 12000 грн',
         'price1.period': '/месяц',
         'price1.cta': 'Начать',
 
@@ -377,14 +377,14 @@ const translations = {
         'price2.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">МАСШТАБ',
         'price2.desc': 'Для растущих компаний, готовых масштабировать выручку',
         'price2.budget': 'Рекламный бюджет $1,000-5,000/месяц',
-        'price2.amount': 'от $400',
+        'price2.amount': 'от 16000 грн',
         'price2.period': '/месяц',
         'price2.cta': 'Обсудить проект',
 
         'price3.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">ENTERPRISE',
         'price3.desc': 'Для компаний, работающих на нескольких рынках с индивидуальными KPI',
         'price3.budget': 'Рекламный бюджет от $5,000/месяц и выше',
-        'price3.amount': 'от $1,000',
+        'price3.amount': 'от 40000 грн',
         'price3.period': '/месяц',
         'price3.cta': 'Запросить предложение',
 
@@ -818,7 +818,7 @@ const translations = {
         'price1.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">СТАРТ',
         'price1.desc': 'Для першого запуску або перезапуску після невдалих спроб',
         'price1.budget': 'Рекламний бюджет до $1,000/місяць',
-        'price1.amount': 'від $300',
+        'price1.amount': 'від 12000 грн',
         'price1.period': '/місяць',
         'price1.cta': 'Розпочати',
 
@@ -826,14 +826,14 @@ const translations = {
         'price2.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">МАСШТАБ',
         'price2.desc': 'Для компаній, що ростуть і готові масштабувати виручку',
         'price2.budget': 'Рекламний бюджет $1,000-5,000/місяць',
-        'price2.amount': 'від $400',
+        'price2.amount': 'від 16000 грн',
         'price2.period': '/місяць',
         'price2.cta': 'Обговорити проект',
 
         'price3.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">ENTERPRISE',
         'price3.desc': 'Для компаній, що працюють на кількох ринках з індивідуальними KPI',
         'price3.budget': 'Рекламний бюджет від $5,000/місяць і вище',
-        'price3.amount': 'від $1,000',
+        'price3.amount': 'від 40000 грн',
         'price3.period': '/місяць',
         'price3.cta': 'Запросити пропозицію',
 
