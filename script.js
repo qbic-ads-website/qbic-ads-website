@@ -237,7 +237,7 @@ const translations = {
         'header.cta': 'Получить бесплатный аудит',
 
         // Hero Section
-        'hero.title': '<span class="hero-text-blue">Запускаем и ведем</span> <span class="highlight-google">Google Ads <img src="images/googleads.webp" alt="Google Ads" class="google-ads-icon"></span> <span class="hero-text-blue">для ecommerce и сервисных компаний с фокусом на прибыль</span> <img src="images/cube.webp" alt="" class="hero-title-cube">',
+        'hero.title': '<span class="hero-text-blue">Запускаем и ведем</span> <span class="highlight-google">Google Ads <img src="images/googleads.webp" alt="Google Ads" class="google-ads-icon"></span> <span class="hero-text-blue"><br>для ecommerce и сервисных компаний с фокусом на прибыль</span> <img src="images/cube.webp" alt="" class="hero-title-cube">',
         'hero.subtitle': 'Google Ads полного цикла для онлайн-бизнеса в Европе и США.<br>От стратегии до масштабирования.',
         'hero.badge': 'Без долгих договоров — ежемесячная оплата, прозрачная отчетность.',
         'hero.cta1': 'Получить бесплатный аудит',
@@ -369,7 +369,7 @@ const translations = {
         'price1.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">СТАРТ',
         'price1.desc': 'Для первого запуска или перезапуска после неудачных попыток',
         'price1.budget': 'Рекламный бюджет до $1,000/месяц',
-        'price1.amount': 'от 12000 грн',
+        'price1.amount': 'от 12&nbsp;000 грн',
         'price1.period': '/месяц',
         'price1.cta': 'Начать',
 
@@ -377,14 +377,14 @@ const translations = {
         'price2.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">МАСШТАБ',
         'price2.desc': 'Для растущих компаний, готовых масштабировать выручку',
         'price2.budget': 'Рекламный бюджет $1,000-5,000/месяц',
-        'price2.amount': 'от 16000 грн',
+        'price2.amount': 'от 16&nbsp;000 грн',
         'price2.period': '/месяц',
         'price2.cta': 'Обсудить проект',
 
-        'price3.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">ENTERPRISE',
+        'price3.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">ЛЮКС',
         'price3.desc': 'Для компаний, работающих на нескольких рынках с индивидуальными KPI',
         'price3.budget': 'Рекламный бюджет от $5,000/месяц и выше',
-        'price3.amount': 'от 40000 грн',
+        'price3.amount': 'от 40&nbsp;000 грн',
         'price3.period': '/месяц',
         'price3.cta': 'Запросить предложение',
 
@@ -397,7 +397,6 @@ const translations = {
         'price2.feature2': '✓ До 10 кампаний (PMax, Shopping, Search)',
         'price2.feature3': '✓ A/B тесты и сегментация аудиторий',
         'price2.feature4': '✓ Ежемесячный отчёт с рекомендациями по росту',
-        'price2.feature5': '✓ Возможен бонус за перевыполнение KPI',
 
         'price3.feature1': '✓ Всё из тарифа МАСШТАБ',
         'price3.feature2': '✓ Неограниченное количество кампаний',
@@ -424,8 +423,7 @@ const translations = {
         'contact.title': 'Давайте обсудим ваш проект',
         'contact.subtitle': '<span class="subtitle-check">✓</span>Ответим в течение часа',
         'contact.info.title': 'Контакты',
-        'contact.phone.label': 'Телефон',
-        'contact.messengers.label': 'Мессенджеры',
+        'contact.messengers.label': 'Contact Us',
         'contact.email.label': 'Почта',
         'contact.note': 'Напишите, из какой вы ниши и в каком регионе планируете рекламироваться, чтобы мы сразу перешли к делу, а не к общим вопросам.',
 
@@ -603,7 +601,7 @@ const translations = {
         'price2.period': '/month',
         'price2.cta': 'Discuss Project',
 
-        'price3.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">ENTERPRISE',
+        'price3.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">LUX',
         'price3.desc': 'For companies operating in multiple markets with custom KPIs',
         'price3.budget': 'Ad budget from $5,000/month and above',
         'price3.amount': 'from $1,000',
@@ -619,7 +617,6 @@ const translations = {
         'price2.feature2': '✓ Up to 10 campaigns (PMax, Shopping, Search)',
         'price2.feature3': '✓ A/B testing and audience segmentation',
         'price2.feature4': '✓ Monthly strategic report with growth recommendations',
-        'price2.feature5': '✓ Performance bonus for exceeding KPIs',
 
         'price3.feature1': '✓ Everything from SCALE plan',
         'price3.feature2': '✓ Unlimited campaigns',
@@ -644,9 +641,8 @@ const translations = {
         'contact.title': 'Let\'s Discuss Your Project',
         'contact.subtitle': '<span class="subtitle-check">✓</span>We\'ll respond within 1 hour',
         'contact.info.title': 'Contacts',
-        'contact.phone.label': 'Phone',
-        'contact.email.label': 'Email',
         'contact.messengers.label': 'Contact Us',
+        'contact.email.label': 'Email',
         'contact.note': 'Share your niche, average order value, and budget — this will help us prepare personalized recommendations.',
 
         'form.name': 'Your name *',
@@ -686,7 +682,7 @@ const translations = {
         'header.cta': 'Отримати безкоштовний аудит',
 
         // Hero Section
-        'hero.title': '<span class="hero-text-blue">Запускаємо та ведемо</span> <span class="highlight-google">Google Ads <img src="images/googleads.webp" alt="Google Ads" class="google-ads-icon"></span> <span class="hero-text-blue">для ecommerce та сервісних компаній з фокусом на прибуток</span> <img src="images/cube.webp" alt="" class="hero-title-cube">',
+        'hero.title': '<span class="hero-text-blue">Запускаємо та ведемо</span> <span class="highlight-google">Google Ads <img src="images/googleads.webp" alt="Google Ads" class="google-ads-icon"></span> <span class="hero-text-blue"><br>для ecommerce та сервісних компаній з фокусом на прибуток</span> <img src="images/cube.webp" alt="" class="hero-title-cube">',
         'hero.subtitle': 'Google Ads повного циклу для онлайн-бізнесу в Європі та США.<br>Від стратегії до масштабування.',
         'hero.badge': 'Без довгих договорів — щомісячна оплата, прозора звітність.',
         'hero.cta1': 'Отримати безкоштовний аудит',
@@ -818,7 +814,7 @@ const translations = {
         'price1.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">СТАРТ',
         'price1.desc': 'Для першого запуску або перезапуску після невдалих спроб',
         'price1.budget': 'Рекламний бюджет до $1,000/місяць',
-        'price1.amount': 'від 12000 грн',
+        'price1.amount': 'від 12&nbsp;000 грн',
         'price1.period': '/місяць',
         'price1.cta': 'Розпочати',
 
@@ -826,14 +822,14 @@ const translations = {
         'price2.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">МАСШТАБ',
         'price2.desc': 'Для компаній, що ростуть і готові масштабувати виручку',
         'price2.budget': 'Рекламний бюджет $1,000-5,000/місяць',
-        'price2.amount': 'від 16000 грн',
+        'price2.amount': 'від 16&nbsp;000 грн',
         'price2.period': '/місяць',
         'price2.cta': 'Обговорити проект',
 
-        'price3.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">ENTERPRISE',
+        'price3.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">ЛЮКС',
         'price3.desc': 'Для компаній, що працюють на кількох ринках з індивідуальними KPI',
         'price3.budget': 'Рекламний бюджет від $5,000/місяць і вище',
-        'price3.amount': 'від 40000 грн',
+        'price3.amount': 'від 40&nbsp;000 грн',
         'price3.period': '/місяць',
         'price3.cta': 'Запросити пропозицію',
 
@@ -846,7 +842,6 @@ const translations = {
         'price2.feature2': '✓ До 10 кампаній (PMax, Shopping, Search)',
         'price2.feature3': '✓ A/B-тести та сегментація аудиторій',
         'price2.feature4': '✓ Щомісячний стратегічний звіт з рекомендаціями по зростанню',
-        'price2.feature5': '✓ Бонус за виконання за перевиконання KPI',
 
         'price3.feature1': '✓ Все з тарифу МАСШТАБ',
         'price3.feature2': '✓ Необмежена кількість кампаній',
@@ -873,8 +868,7 @@ const translations = {
         'contact.title': 'Давайте обговоримо ваш проект',
         'contact.subtitle': '<span class="subtitle-check">✓</span>Відповімо протягом години',
         'contact.info.title': 'Контакти',
-        'contact.phone.label': 'Телефон',
-        'contact.messengers.label': 'Месенджери',
+        'contact.messengers.label': 'Contact Us',
         'contact.email.label': 'Пошта',
         'contact.note': 'Напишіть, з якої ниші ви та в якому регіоні плануєте рекламуватися, щоб ми одразу перейшли до справи, а не до загальних питань.',
 
