@@ -393,7 +393,8 @@ body {
     background: transparent;
 }
 
-.lang-switcher:hover .lang-dropdown {
+.lang-switcher:hover .lang-dropdown,
+.lang-dropdown.active {
     display: flex;
 }
 

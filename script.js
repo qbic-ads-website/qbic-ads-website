@@ -369,7 +369,7 @@ const translations = {
         'price1.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">СТАРТ',
         'price1.desc': 'Для первого запуска или перезапуска после неудачных попыток',
         'price1.budget': 'Рекламный бюджет до $1,000/месяц',
-        'price1.amount': 'от 12&nbsp;000 грн',
+        'price1.amount': 'от 12 000 грн',
         'price1.period': '/месяц',
         'price1.cta': 'Начать',
 
@@ -377,14 +377,14 @@ const translations = {
         'price2.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">МАСШТАБ',
         'price2.desc': 'Для растущих компаний, готовых масштабировать выручку',
         'price2.budget': 'Рекламный бюджет $1,000-5,000/месяц',
-        'price2.amount': 'от 16&nbsp;000 грн',
+        'price2.amount': 'от 16 000 грн',
         'price2.period': '/месяц',
         'price2.cta': 'Обсудить проект',
 
         'price3.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">ЛЮКС',
         'price3.desc': 'Для компаний, работающих на нескольких рынках с индивидуальными KPI',
         'price3.budget': 'Рекламный бюджет от $5,000/месяц и выше',
-        'price3.amount': 'от 40&nbsp;000 грн',
+        'price3.amount': 'от 40 000 грн',
         'price3.period': '/месяц',
         'price3.cta': 'Запросить предложение',
 
@@ -814,7 +814,7 @@ const translations = {
         'price1.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">СТАРТ',
         'price1.desc': 'Для першого запуску або перезапуску після невдалих спроб',
         'price1.budget': 'Рекламний бюджет до $1,000/місяць',
-        'price1.amount': 'від 12&nbsp;000 грн',
+        'price1.amount': 'від 12 000 грн',
         'price1.period': '/місяць',
         'price1.cta': 'Розпочати',
 
@@ -822,14 +822,14 @@ const translations = {
         'price2.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">МАСШТАБ',
         'price2.desc': 'Для компаній, що ростуть і готові масштабувати виручку',
         'price2.budget': 'Рекламний бюджет $1,000-5,000/місяць',
-        'price2.amount': 'від 16&nbsp;000 грн',
+        'price2.amount': 'від 16 000 грн',
         'price2.period': '/місяць',
         'price2.cta': 'Обговорити проект',
 
         'price3.title': '<img src="images/cube.webp" alt="" class="pricing-title-icon">ЛЮКС',
         'price3.desc': 'Для компаній, що працюють на кількох ринках з індивідуальними KPI',
         'price3.budget': 'Рекламний бюджет від $5,000/місяць і вище',
-        'price3.amount': 'від 40&nbsp;000 грн',
+        'price3.amount': 'від 40 000 грн',
         'price3.period': '/місяць',
         'price3.cta': 'Запросити пропозицію',
 
@@ -933,11 +933,29 @@ let currentLang = getLanguageFromURL();
 // Language Switcher with Translation
 const langBtn = document.querySelector('.lang-btn');
 const langOptions = document.querySelectorAll('.lang-option');
+const langDropdown = document.querySelector('.lang-dropdown');
 
 console.log('Language switcher initialized:', {
     langBtn: langBtn,
     langOptionsCount: langOptions.length
 });
+
+// Toggle dropdown on mobile when clicking the lang button
+if (langBtn && langDropdown) {
+    langBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        langDropdown.classList.toggle('active');
+        console.log('Lang dropdown toggled:', langDropdown.classList.contains('active'));
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.lang-switcher')) {
+            langDropdown.classList.remove('active');
+        }
+    });
+}
 
 if (langBtn && langOptions.length > 0) {
     langOptions.forEach(option => {
@@ -950,6 +968,10 @@ if (langBtn && langOptions.length > 0) {
             switchLanguage(selectedLang);
             // Update URL based on language
             updateURL(selectedLang);
+            // Close dropdown after selection
+            if (langDropdown) {
+                langDropdown.classList.remove('active');
+            }
         });
     });
 }
