@@ -942,25 +942,33 @@ console.log('Language switcher initialized:', {
 
 // Toggle dropdown on mobile when clicking the lang button
 if (langBtn && langDropdown) {
-    langBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+    // Function to toggle dropdown
+    const toggleDropdown = (e) => {
         e.stopPropagation();
         langDropdown.classList.toggle('active');
         console.log('Lang dropdown toggled:', langDropdown.classList.contains('active'));
-    });
+    };
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
+    // Add both click and touchstart for mobile support
+    langBtn.addEventListener('click', toggleDropdown);
+    langBtn.addEventListener('touchstart', toggleDropdown, { passive: false });
+
+    // Close dropdown when clicking/touching outside
+    const closeDropdown = (e) => {
         if (!e.target.closest('.lang-switcher')) {
             langDropdown.classList.remove('active');
         }
-    });
+    };
+
+    document.addEventListener('click', closeDropdown);
+    document.addEventListener('touchstart', closeDropdown);
 }
 
 if (langBtn && langOptions.length > 0) {
     langOptions.forEach(option => {
         console.log('Adding listener to:', option.dataset.lang);
-        option.addEventListener('click', (e) => {
+
+        const selectLanguage = (e) => {
             e.preventDefault();
             e.stopPropagation();
             const selectedLang = option.dataset.lang;
@@ -972,7 +980,10 @@ if (langBtn && langOptions.length > 0) {
             if (langDropdown) {
                 langDropdown.classList.remove('active');
             }
-        });
+        };
+
+        option.addEventListener('click', selectLanguage);
+        option.addEventListener('touchstart', selectLanguage, { passive: false });
     });
 }
 
