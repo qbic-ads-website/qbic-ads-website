@@ -102,4 +102,58 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = `index.html?lang=${currentLanguage}`;
         });
     }
+
+    // ============================================
+    // GTM CONVERSION TRACKING FOR THANK YOU PAGE
+    // ============================================
+
+    // Track Telegram button clicks
+    document.querySelectorAll('a[href*="t.me"], .telegram').forEach(link => {
+        link.addEventListener('click', () => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'telegram_click',
+                'button_location': 'thank_you_page'
+            });
+            console.log('📱 Telegram click tracked (Thank You page)');
+        });
+    });
+
+    // Track WhatsApp button clicks
+    document.querySelectorAll('a[href*="wa.me"], .whatsapp').forEach(link => {
+        link.addEventListener('click', () => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'whatsapp_click',
+                'button_location': 'thank_you_page'
+            });
+            console.log('📱 WhatsApp click tracked (Thank You page)');
+        });
+    });
+
+    // Track Instagram clicks
+    document.querySelectorAll('a[href*="instagram.com"], .instagram').forEach(link => {
+        link.addEventListener('click', () => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'instagram_click',
+                'button_location': 'thank_you_page'
+            });
+            console.log('📷 Instagram click tracked (Thank You page)');
+        });
+    });
+
+    // Track LinkedIn clicks
+    document.querySelectorAll('a[href*="linkedin.com"], .linkedin').forEach(link => {
+        link.addEventListener('click', () => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'linkedin_click',
+                'button_location': 'thank_you_page'
+            });
+            console.log('💼 LinkedIn click tracked (Thank You page)');
+        });
+    });
+
+    console.log('%c 📊 GTM Conversion Tracking активен (Thank You Page) ', 'background: #8b5cf6; color: white; font-size: 14px; padding: 5px;');
 });
