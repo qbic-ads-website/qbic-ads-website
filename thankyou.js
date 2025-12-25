@@ -85,6 +85,15 @@ function switchLanguage(lang) {
 document.addEventListener('DOMContentLoaded', () => {
     switchLanguage(currentLanguage);
 
+    // Track Thank You page view in GTM
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'thank_you_page_view',
+        'page_type': 'thank_you',
+        'language': currentLanguage
+    });
+    console.log('✅ Thank You page view tracked');
+
     // Update home button link with current language
     const homeBtn = document.querySelector('.btn-home');
     if (homeBtn) {

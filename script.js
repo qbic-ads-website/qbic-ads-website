@@ -1270,9 +1270,115 @@ if (scrollTopBtn) {
     });
 }
 
+// ============================================
+// GTM CONVERSION TRACKING
+// ============================================
+
+// Track Telegram button clicks
+document.querySelectorAll('a[href*="t.me"], .telegram').forEach(link => {
+    link.addEventListener('click', () => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'telegram_click',
+            'button_location': link.closest('.hero') ? 'hero' :
+                              link.closest('.floating-buttons') ? 'floating' :
+                              link.closest('.contact') ? 'contact' :
+                              link.closest('.footer') ? 'footer' : 'other'
+        });
+        console.log('📱 Telegram click tracked');
+    });
+});
+
+// Track WhatsApp button clicks
+document.querySelectorAll('a[href*="wa.me"], .whatsapp').forEach(link => {
+    link.addEventListener('click', () => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'whatsapp_click',
+            'button_location': link.closest('.floating-buttons') ? 'floating' :
+                              link.closest('.contact') ? 'contact' :
+                              link.closest('.footer') ? 'footer' : 'other'
+        });
+        console.log('📱 WhatsApp click tracked');
+    });
+});
+
+// Track phone clicks
+document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', () => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'phone_click',
+            'phone_number': link.getAttribute('href').replace('tel:', ''),
+            'button_location': link.closest('.contact') ? 'contact' :
+                              link.closest('.footer') ? 'footer' : 'other'
+        });
+        console.log('📞 Phone click tracked');
+    });
+});
+
+// Track email clicks
+document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', () => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'email_click',
+            'button_location': link.closest('.contact') ? 'contact' :
+                              link.closest('.footer') ? 'footer' : 'other'
+        });
+        console.log('✉️ Email click tracked');
+    });
+});
+
+// Track scroll depth
+let scrollDepth50Tracked = false;
+let scrollDepth75Tracked = false;
+
+window.addEventListener('scroll', () => {
+    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+    // 50% scroll
+    if (scrollPercent >= 50 && !scrollDepth50Tracked) {
+        scrollDepth50Tracked = true;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'scroll_depth',
+            'scroll_percentage': 50
+        });
+        console.log('📜 Scroll 50% tracked');
+    }
+
+    // 75% scroll
+    if (scrollPercent >= 75 && !scrollDepth75Tracked) {
+        scrollDepth75Tracked = true;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'scroll_depth',
+            'scroll_percentage': 75
+        });
+        console.log('📜 Scroll 75% tracked');
+    }
+});
+
+// Track time on site (2 minutes)
+let timeOnSite2MinTracked = false;
+
+setTimeout(() => {
+    if (!timeOnSite2MinTracked) {
+        timeOnSite2MinTracked = true;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'time_on_site',
+            'duration_seconds': 120
+        });
+        console.log('⏱️ Time on site 2 minutes tracked');
+    }
+}, 120000); // 2 minutes = 120000ms
+
 // Console log
 console.log('%c QBIC Ads ', 'background: #00d4ff; color: #1a1a2e; font-size: 20px; font-weight: bold; padding: 10px;');
 console.log('%c 🚀 Google Ads Landing Page готова! ', 'background: #10b981; color: white; font-size: 14px; padding: 5px;');
+console.log('%c 📊 GTM Conversion Tracking активен ', 'background: #8b5cf6; color: white; font-size: 14px; padding: 5px;');
 
 // Instructions for Telegram bot setup
 if (TELEGRAM_CONFIG.botToken === 'YOUR_BOT_TOKEN_HERE') {
