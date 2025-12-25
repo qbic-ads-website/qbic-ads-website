@@ -2588,8 +2588,21 @@ select.form-input {
     }
 
     /* Оптимизируем header */
+    .header {
+        overflow: visible;
+    }
+
+    .header-content {
+        overflow: visible;
+    }
+
     .header-right {
         gap: 6px;
+        overflow: visible;
+    }
+
+    .lang-switcher {
+        overflow: visible;
     }
 
     .lang-btn {
