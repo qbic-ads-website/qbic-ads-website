@@ -1330,6 +1330,45 @@ document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
     });
 });
 
+// Track YouTube clicks
+document.querySelectorAll('a[href*="youtube.com"], .youtube').forEach(link => {
+    link.addEventListener('click', () => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'youtube_click',
+            'button_location': link.closest('.contact') ? 'contact' :
+                              link.closest('.footer') ? 'footer' : 'other'
+        });
+        console.log('📺 YouTube click tracked');
+    });
+});
+
+// Track Instagram clicks
+document.querySelectorAll('a[href*="instagram.com"], .instagram').forEach(link => {
+    link.addEventListener('click', () => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'instagram_click',
+            'button_location': link.closest('.contact') ? 'contact' :
+                              link.closest('.footer') ? 'footer' : 'other'
+        });
+        console.log('📷 Instagram click tracked');
+    });
+});
+
+// Track LinkedIn clicks
+document.querySelectorAll('a[href*="linkedin.com"], .linkedin').forEach(link => {
+    link.addEventListener('click', () => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'linkedin_click',
+            'button_location': link.closest('.contact') ? 'contact' :
+                              link.closest('.footer') ? 'footer' : 'other'
+        });
+        console.log('💼 LinkedIn click tracked');
+    });
+});
+
 // Track scroll depth
 let scrollDepth50Tracked = false;
 let scrollDepth75Tracked = false;
