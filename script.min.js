@@ -942,26 +942,37 @@ console.log('Language switcher initialized:', {
 
 // Toggle dropdown on mobile when clicking the lang button
 if (langBtn && langDropdown) {
+    let isToggling = false;
+
     // Function to toggle dropdown
     const toggleDropdown = (e) => {
         e.stopPropagation();
+        e.preventDefault();
+
+        // Prevent double-firing on devices that support both touch and click
+        if (isToggling) return;
+        isToggling = true;
+        setTimeout(() => { isToggling = false; }, 300);
+
+        const isActive = langDropdown.classList.contains('active');
         langDropdown.classList.toggle('active');
-        console.log('Lang dropdown toggled:', langDropdown.classList.contains('active'));
+        console.log('Lang dropdown toggled:', !isActive, 'Event type:', e.type);
     };
 
-    // Add both click and touchstart for mobile support
+    // Add both click and touchend for better mobile support
     langBtn.addEventListener('click', toggleDropdown);
-    langBtn.addEventListener('touchstart', toggleDropdown, { passive: false });
+    langBtn.addEventListener('touchend', toggleDropdown);
 
     // Close dropdown when clicking/touching outside
     const closeDropdown = (e) => {
-        if (!e.target.closest('.lang-switcher')) {
+        if (!e.target.closest('.lang-switcher') && langDropdown.classList.contains('active')) {
             langDropdown.classList.remove('active');
+            console.log('Dropdown closed - clicked outside');
         }
     };
 
     document.addEventListener('click', closeDropdown);
-    document.addEventListener('touchstart', closeDropdown);
+    document.addEventListener('touchend', closeDropdown);
 }
 
 if (langBtn && langOptions.length > 0) {
@@ -972,7 +983,7 @@ if (langBtn && langOptions.length > 0) {
             e.preventDefault();
             e.stopPropagation();
             const selectedLang = option.dataset.lang;
-            console.log('Language clicked:', selectedLang);
+            console.log('Language selected:', selectedLang, 'Event type:', e.type);
             switchLanguage(selectedLang);
             // Update URL based on language
             updateURL(selectedLang);
@@ -983,7 +994,7 @@ if (langBtn && langOptions.length > 0) {
         };
 
         option.addEventListener('click', selectLanguage);
-        option.addEventListener('touchstart', selectLanguage, { passive: false });
+        option.addEventListener('touchend', selectLanguage);
     });
 }
 
