@@ -954,9 +954,16 @@ if (langBtn && langDropdown) {
         isToggling = true;
         setTimeout(() => { isToggling = false; }, 300);
 
-        const isActive = langDropdown.classList.contains('active');
         langDropdown.classList.toggle('active');
-        console.log('Lang dropdown toggled:', !isActive, 'Event type:', e.type);
+
+        // Position dropdown centered under the button on mobile
+        if (window.innerWidth <= 768) {
+            const btnRect = langBtn.getBoundingClientRect();
+            const dropdownWidth = 80; // min-width from CSS
+            const left = btnRect.left + (btnRect.width / 2) - (dropdownWidth / 2);
+            langDropdown.style.left = left + 'px';
+            langDropdown.style.top = (btnRect.bottom + 4) + 'px';
+        }
     };
 
     // Add both click and touchend for better mobile support
