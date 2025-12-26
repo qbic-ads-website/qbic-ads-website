@@ -2610,31 +2610,19 @@ select.form-input {
     .lang-dropdown {
         position: fixed !important;
         z-index: 99999 !important;
-        display: flex !important;
+        display: none !important;
         flex-direction: column !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        background: red !important;
-        border: 5px solid yellow !important;
-        min-width: 150px !important;
-        padding: 20px !important;
-        font-size: 24px !important;
+        top: 60px !important;
+        right: 16px !important;
     }
 
     .lang-dropdown.active {
         display: flex !important;
         flex-direction: column !important;
         position: fixed !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
+        top: 60px !important;
+        right: 16px !important;
         z-index: 99999 !important;
-        background: lime !important;
-        border: 5px solid blue !important;
-        min-width: 150px !important;
-        padding: 20px !important;
-        font-size: 24px !important;
     }
 
     .lang-btn {
