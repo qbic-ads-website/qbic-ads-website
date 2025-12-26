@@ -93,6 +93,13 @@ body {
     overflow-x: hidden;
 }
 
+/* Image optimization - decode async for faster rendering */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    decoding: async;
+}
+
 /* Desktop 90% zoom effect - only for screens wider than 768px */
 @media (min-width: 769px) {
     body {
