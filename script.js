@@ -959,7 +959,7 @@ if (langBtn && langDropdown) {
         // Position dropdown centered under the button on mobile
         if (window.innerWidth <= 768) {
             const btnRect = langBtn.getBoundingClientRect();
-            const dropdownWidth = 80; // min-width from CSS
+            const dropdownWidth = 60; // min-width from CSS
             const left = btnRect.left + (btnRect.width / 2) - (dropdownWidth / 2);
             langDropdown.style.left = left + 'px';
             langDropdown.style.top = (btnRect.bottom + 4) + 'px';

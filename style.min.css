@@ -2612,6 +2612,9 @@ select.form-input {
         z-index: 99999 !important;
         display: none !important;
         flex-direction: column !important;
+        min-width: 60px !important;
+        max-width: 60px !important;
+        width: 60px !important;
     }
 
     .lang-dropdown.active {
@@ -2619,6 +2622,15 @@ select.form-input {
         flex-direction: column !important;
         position: fixed !important;
         z-index: 99999 !important;
+        min-width: 60px !important;
+        max-width: 60px !important;
+        width: 60px !important;
+    }
+
+    .lang-option {
+        padding: 8px 10px !important;
+        font-size: 12px !important;
+        text-align: center !important;
     }
 
     .lang-btn {
