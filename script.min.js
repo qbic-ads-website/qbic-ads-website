@@ -458,7 +458,7 @@ const translations = {
         'header.cta': 'Get Free Audit',
 
         // Hero Section
-        'hero.title': '<span class="hero-text-blue">Launch and manage</span> <span class="highlight-google">Google Ads <img src="images/googleads.webp" alt="Google Ads" class="google-ads-icon"></span> <span class="hero-text-blue"><br>for ecommerce and service companies with focus on profit <img src="images/cube.webp" alt="" class="hero-title-cube"></span>',
+        'hero.title': '<span class="hero-text-blue">Launch and manage</span> <span class="highlight-google">Google Ads <img src="images/googleads.webp" alt="Google Ads" class="google-ads-icon"></span> <span class="hero-text-blue">for ecommerce and service companies with focus on profit <img src="images/cube.webp" alt="" class="hero-title-cube"></span>',
         'hero.subtitle': 'Full-cycle Google Ads for online businesses in Europe and the US.<br>End-to-end service from strategy to scaling.',
         'hero.badge': 'No long-term contracts — monthly billing, transparent reporting.',
         'hero.cta1': 'Get Audit',
