@@ -2608,27 +2608,21 @@ select.form-input {
     }
 
     .lang-dropdown {
-        position: fixed !important;
+        position: absolute !important;
         z-index: 9999 !important;
-        display: flex !important;
-        background: red !important;
-        top: 70px !important;
-        right: 10px !important;
-        margin-top: 0px;
-        border: 5px solid yellow !important;
-        min-width: 100px !important;
-        padding: 10px !important;
+        display: none !important;
+        top: calc(100% + 4px) !important;
+        right: 0 !important;
+        left: auto !important;
     }
 
     .lang-dropdown.active {
         display: flex !important;
-        position: fixed !important;
-        top: 70px !important;
-        right: 10px !important;
-        margin-top: 0px;
-        background: lime !important;
+        position: absolute !important;
+        top: calc(100% + 4px) !important;
+        right: 0 !important;
+        left: auto !important;
         z-index: 9999 !important;
-        border: 5px solid blue !important;
     }
 
     .lang-btn {
