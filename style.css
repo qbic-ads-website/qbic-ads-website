@@ -2610,19 +2610,27 @@ select.form-input {
     .lang-dropdown {
         position: absolute !important;
         z-index: 9999 !important;
-        display: none !important;
+        display: flex !important;
+        flex-direction: column !important;
         top: calc(100% + 4px) !important;
         right: 0 !important;
         left: auto !important;
+        background: red !important;
+        border: 3px solid yellow !important;
+        min-width: 80px !important;
     }
 
     .lang-dropdown.active {
         display: flex !important;
+        flex-direction: column !important;
         position: absolute !important;
         top: calc(100% + 4px) !important;
         right: 0 !important;
         left: auto !important;
         z-index: 9999 !important;
+        background: lime !important;
+        border: 3px solid blue !important;
+        min-width: 80px !important;
     }
 
     .lang-btn {
