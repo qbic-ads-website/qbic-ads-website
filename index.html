@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K42ZX5LH');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Qbic Ads - Google Ads Specialists</title>
     <meta name="description" content="Professional Google Ads management for e-commerce. We increase ROAS and reduce conversion costs.">
     <link rel="icon" type="image/webp" href="images/cube.webp">
 
-    <!-- Preload critical resources -->
+    <!-- Preload ONLY LCP image - most critical -->
+    <link rel="preload" href="images/post.webp?v=2" as="image" fetchpriority="high">
+    <link rel="preload" href="images/badges.webp" as="image" fetchpriority="high">
+
+    <!-- Critical CSS inline for faster LCP -->
+    <style>
+        body{margin:0;padding:0;background:#2a2438;color:#fff;font-family:system-ui,-apple-system,sans-serif;overflow-x:hidden}
+        .hero-visual{position:relative;max-width:100%}
+        .hero-post,.hero-badges{display:block;max-width:100%;height:auto}
+        img{image-rendering:-webkit-optimize-contrast}
+    </style>
+
+    <!-- Preload CSS -->
     <link rel="preload" href="style.min.css?v=73" as="style">
-    <link rel="preload" href="images/post.webp?v=2" as="image">
-    <link rel="preload" href="images/badges.webp" as="image">
-    <link rel="preload" href="images/cube.webp" as="image">
-    <link rel="preload" href="images/googleads.webp" as="image">
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -887,6 +887,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Google Tag Manager - moved to end for faster LCP -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K42ZX5LH');</script>
+    <!-- End Google Tag Manager -->
 
     <script src="script.min.js?v=48"></script>
 </body>
