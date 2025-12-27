@@ -612,6 +612,10 @@ img {
     padding-bottom: 0;
 }
 
+.hero-post-wrapper {
+    display: block;
+}
+
 .hero-post {
     max-width: 100%;
     height: auto;
@@ -652,6 +656,10 @@ img {
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
+}
+
+.hero-badges-wrapper {
+    display: block;
 }
 
 .hero-badges {

@@ -7,22 +7,21 @@
     <meta name="description" content="Professional Google Ads management for e-commerce. We increase ROAS and reduce conversion costs.">
     <link rel="icon" type="image/webp" href="images/cube.webp">
 
-    <!-- Preload ONLY LCP image - most critical -->
-    <link rel="preload" href="images/post-mobile.webp" as="image" fetchpriority="high" media="(max-width: 768px)">
-    <link rel="preload" href="images/post.webp?v=2" as="image" fetchpriority="high" media="(min-width: 769px)">
-    <link rel="preload" href="images/badges-mobile.webp" as="image" fetchpriority="high" media="(max-width: 768px)">
-    <link rel="preload" href="images/badges.webp" as="image" fetchpriority="high" media="(min-width: 769px)">
+    <!-- Preload ONLY mobile LCP images - critical path -->
+    <link rel="preload" href="images/badges-mobile.webp" as="image" fetchpriority="high">
 
     <!-- Critical CSS inline for faster LCP -->
     <style>
         body{margin:0;padding:0;background:#2a2438;color:#fff;font-family:system-ui,-apple-system,sans-serif;overflow-x:hidden}
         .hero-visual{position:relative;max-width:100%}
         .hero-post,.hero-badges{display:block;max-width:100%;height:auto}
+        .hero-post-wrapper,.hero-badges-wrapper{display:block}
+        picture{display:block}
         img{image-rendering:-webkit-optimize-contrast}
     </style>
 
     <!-- Preload CSS -->
-    <link rel="preload" href="style.min.css?v=73" as="style">
+    <link rel="preload" href="style.min.css?v=74" as="style">
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Teachers:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Teachers:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
-    <link rel="stylesheet" href="style.min.css?v=73">
+    <link rel="stylesheet" href="style.min.css?v=74">
 </head>
 <body>
     <!-- Google Tag Manager - loads async, doesn't block render -->
@@ -143,23 +142,17 @@
                 </div>
                 <div class="hero-right">
                     <div class="hero-visual">
-                        <img src="images/post-mobile.webp"
-                             srcset="images/post-mobile.webp 548w, images/post.webp?v=2 1096w"
-                             sizes="(max-width: 768px) 548px, 1096px"
-                             alt="Google Ads Dashboard"
-                             class="hero-post"
-                             width="1096"
-                             height="1104"
-                             fetchpriority="high">
+                        <picture class="hero-post-wrapper">
+                            <source media="(max-width: 768px)" srcset="images/post-mobile.webp" width="548" height="552">
+                            <source media="(min-width: 769px)" srcset="images/post.webp?v=2" width="1096" height="1104">
+                            <img src="images/post-mobile.webp" alt="Google Ads Dashboard" class="hero-post" width="548" height="552" fetchpriority="high">
+                        </picture>
                         <div class="badges-section">
-                            <img src="images/badges-mobile.webp"
-                                 srcset="images/badges-mobile.webp 665w, images/badges.webp 1330w"
-                                 sizes="(max-width: 768px) 665px, 1330px"
-                                 alt="Google Ads Certifications"
-                                 class="hero-badges"
-                                 width="1330"
-                                 height="263"
-                                 fetchpriority="high">
+                            <picture class="hero-badges-wrapper">
+                                <source media="(max-width: 768px)" srcset="images/badges-mobile.webp" width="665" height="131">
+                                <source media="(min-width: 769px)" srcset="images/badges.webp" width="1330" height="263">
+                                <img src="images/badges-mobile.webp" alt="Google Ads Certifications" class="hero-badges" width="665" height="131" fetchpriority="high">
+                            </picture>
                         </div>
                     </div>
                 </div>
