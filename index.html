@@ -8,8 +8,10 @@
     <link rel="icon" type="image/webp" href="images/cube.webp">
 
     <!-- Preload ONLY LCP image - most critical -->
-    <link rel="preload" href="images/post.webp?v=2" as="image" fetchpriority="high">
-    <link rel="preload" href="images/badges.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="images/post-mobile.webp" as="image" fetchpriority="high" media="(max-width: 768px)">
+    <link rel="preload" href="images/post.webp?v=2" as="image" fetchpriority="high" media="(min-width: 769px)">
+    <link rel="preload" href="images/badges-mobile.webp" as="image" fetchpriority="high" media="(max-width: 768px)">
+    <link rel="preload" href="images/badges.webp" as="image" fetchpriority="high" media="(min-width: 769px)">
 
     <!-- Critical CSS inline for faster LCP -->
     <style>
@@ -141,9 +143,23 @@
                 </div>
                 <div class="hero-right">
                     <div class="hero-visual">
-                        <img src="images/post.webp?v=2" alt="Google Ads Dashboard" class="hero-post" width="1096" height="1104" fetchpriority="high">
+                        <img src="images/post-mobile.webp"
+                             srcset="images/post-mobile.webp 548w, images/post.webp?v=2 1096w"
+                             sizes="(max-width: 768px) 548px, 1096px"
+                             alt="Google Ads Dashboard"
+                             class="hero-post"
+                             width="1096"
+                             height="1104"
+                             fetchpriority="high">
                         <div class="badges-section">
-                            <img src="images/badges.webp" alt="Google Ads Certifications" class="hero-badges" width="1330" height="263" fetchpriority="high">
+                            <img src="images/badges-mobile.webp"
+                                 srcset="images/badges-mobile.webp 665w, images/badges.webp 1330w"
+                                 sizes="(max-width: 768px) 665px, 1330px"
+                                 alt="Google Ads Certifications"
+                                 class="hero-badges"
+                                 width="1330"
+                                 height="263"
+                                 fetchpriority="high">
                         </div>
                     </div>
                 </div>
