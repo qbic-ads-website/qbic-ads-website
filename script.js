@@ -895,25 +895,16 @@ window.addEventListener('load', () => {
 
 // Modal functions for reporting image
 function openReportModal() {
-    console.log('Opening report modal...');
     const modal = document.getElementById('reportModal');
-    const img = document.getElementById('reportModalImg');
-
     if (modal) {
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-        console.log('Modal opened, image src:', img ? img.src : 'Image not found');
-    } else {
-        console.error('Modal element not found!');
+        modal.style.display = 'block';
     }
 }
 
 function closeReportModal() {
-    console.log('Closing report modal...');
     const modal = document.getElementById('reportModal');
     if (modal) {
         modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restore scrolling
     }
 }
 
