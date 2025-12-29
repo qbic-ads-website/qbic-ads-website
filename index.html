@@ -18,7 +18,7 @@
     </style>
 
     <!-- Preload CSS -->
-    <link rel="preload" href="style.min.css?v=86" as="style">
+    <link rel="preload" href="style.min.css?v=87" as="style">
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Teachers:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Teachers:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
-    <link rel="stylesheet" href="style.min.css?v=86">
+    <link rel="stylesheet" href="style.min.css?v=87">
 </head>
 <body>
     <!-- Google Tag Manager - loads async, doesn't block render -->
@@ -410,8 +410,8 @@
 
             <!-- Modal for full-size report image -->
             <div id="reportModal" class="report-modal" onclick="closeReportModal()">
-                <span class="report-modal-close">&times;</span>
-                <img class="report-modal-content" id="reportModalImg" src="images/report.webp" alt="Full Reporting Dashboard">
+                <span class="report-modal-close" onclick="closeReportModal()">&times;</span>
+                <img class="report-modal-content" id="reportModalImg" src="images/report.webp" alt="Full Reporting Dashboard" onclick="event.stopPropagation()">
             </div>
         </div>
     </section>
@@ -910,6 +910,6 @@
         </div>
     </footer>
 
-    <script src="script.min.js?v=49"></script>
+    <script src="script.min.js?v=50"></script>
 </body>
 </html>
