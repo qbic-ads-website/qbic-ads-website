@@ -1702,7 +1702,7 @@ section {
 
 .report-feature p {
     color: var(--text-secondary);
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.6;
     margin: 0;
 }
@@ -3087,7 +3087,7 @@ select.form-input {
     }
 
     .report-feature p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .report-modal-content {
