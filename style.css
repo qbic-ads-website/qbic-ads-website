@@ -2827,12 +2827,19 @@ select.form-input {
         font-size: 16px;
     }
 
+    .badges-section {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
     .hero-badges {
         max-height: 200px;
         max-width: 100%;
         width: 100%;
         height: auto;
         object-fit: contain;
+        transform: translateX(0);
     }
 
     .main-card {
