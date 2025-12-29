@@ -1247,16 +1247,16 @@ section {
 }
 
 .service-title {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 700;
     color: #64E4E8;
     margin: 0;
 }
 
 .service-description {
-    font-size: 13px;
+    font-size: 16px;
     color: var(--text-secondary);
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
     text-align: center;
 }
