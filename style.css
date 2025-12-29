@@ -1658,11 +1658,18 @@ section {
     background: var(--dark-bg);
 }
 
-.reports-features {
+/* Two-column layout: features left, preview right */
+.reports-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.reports-features {
+    display: flex;
+    flex-direction: column;
     gap: 18px;
-    margin-bottom: 36px;
 }
 
 .report-feature {
@@ -1673,6 +1680,12 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 18px;
+    transition: all 0.3s ease;
+}
+
+.report-feature:hover {
+    border-color: var(--primary-color);
+    transform: translateX(4px);
 }
 
 .feature-icon {
@@ -1683,28 +1696,41 @@ section {
 }
 
 .report-feature:hover .feature-icon {
-    transform: translateX(5px) scale(1.1);
+    transform: scale(1.15);
+    color: var(--primary-color);
 }
 
 .report-feature p {
     color: var(--text-secondary);
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .report-preview {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    position: relative;
+    cursor: pointer;
     border-radius: 12px;
-    padding: 24px;
-    text-align: center;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
 }
 
-.report-image {
+.report-preview:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 24px rgba(170, 75, 214, 0.4);
+    transform: translateY(-6px);
+}
+
+.report-image-clickable {
+    display: block;
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.report-preview:hover .report-image-clickable {
+    transform: scale(1.03);
 }
 
 .report-note {
@@ -3007,5 +3033,71 @@ select.form-input {
     .messenger-link svg {
         width: 24px;
         height: 24px;
+    }
+}
+
+/* Modal styles for report image */
+.report-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    cursor: pointer;
+}
+
+.report-modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 1600px;
+    max-height: 90vh;
+    object-fit: contain;
+    margin-top: 5vh;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.report-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 300;
+    transition: color 0.3s;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.report-modal-close:hover,
+.report-modal-close:focus {
+    color: var(--primary-color);
+}
+
+/* Mobile responsive for reports section */
+@media (max-width: 768px) {
+    .reports-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .report-feature p {
+        font-size: 14px;
+    }
+
+    .report-modal-content {
+        width: 95%;
+        margin-top: 10vh;
+    }
+
+    .report-modal-close {
+        top: 10px;
+        right: 20px;
+        font-size: 36px;
     }
 }

@@ -18,7 +18,7 @@
     </style>
 
     <!-- Preload CSS -->
-    <link rel="preload" href="style.min.css?v=83" as="style">
+    <link rel="preload" href="style.min.css?v=84" as="style">
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Teachers:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Teachers:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
-    <link rel="stylesheet" href="style.min.css?v=83">
+    <link rel="stylesheet" href="style.min.css?v=84">
 </head>
 <body>
     <!-- Google Tag Manager - loads async, doesn't block render -->
@@ -358,52 +358,60 @@
                 Интерактивные отчёты в Google Looker Studio
             </p>
 
-            <div class="reports-features">
-                <!-- 1. Общие цифры -->
-                <div class="report-feature">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="20" x2="18" y2="10"/>
-                            <line x1="12" y1="20" x2="12" y2="4"/>
-                            <line x1="6" y1="20" x2="6" y2="14"/>
-                        </svg>
+            <div class="reports-content">
+                <div class="reports-features">
+                    <!-- 1. Общие цифры -->
+                    <div class="report-feature">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
+                        <p data-i18n="reports.feature1">Сумма заказов и количество конверсий по кампаниям</p>
                     </div>
-                    <p data-i18n="reports.feature1">Сумма заказов и количество конверсий по кампаниям</p>
+                    <!-- 2. Тренды -->
+                    <div class="report-feature">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <p data-i18n="reports.feature2">Динамика метрик по периодам</p>
+                    </div>
+                    <!-- 3. Эффективность -->
+                    <div class="report-feature">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                                <polyline points="17 6 23 6 23 12"/>
+                            </svg>
+                        </div>
+                        <p data-i18n="reports.feature3">ROAS, доля рекламных расходов и цена за конверсию</p>
+                    </div>
+                    <!-- 4. Детализация -->
+                    <div class="report-feature">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <p data-i18n="reports.feature4">Успешные и проблемные кампании</p>
+                    </div>
                 </div>
-                <!-- 2. Тренды -->
-                <div class="report-feature">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                        </svg>
-                    </div>
-                    <p data-i18n="reports.feature2">Динамика метрик по периодам</p>
-                </div>
-                <!-- 3. Эффективность -->
-                <div class="report-feature">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-                            <polyline points="17 6 23 6 23 12"/>
-                        </svg>
-                    </div>
-                    <p data-i18n="reports.feature3">ROAS, доля рекламных расходов и цена за конверсию</p>
-                </div>
-                <!-- 4. Детализация -->
-                <div class="report-feature">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <circle cx="12" cy="12" r="6"/>
-                            <circle cx="12" cy="12" r="2"/>
-                        </svg>
-                    </div>
-                    <p data-i18n="reports.feature4">Успешные и проблемные кампании</p>
+
+                <div class="report-preview">
+                    <img src="images/report.webp" alt="Пример отчёта из Looker Studio" class="report-image-clickable" loading="lazy" width="1940" height="1134" onclick="openReportModal()">
                 </div>
             </div>
 
-            <div class="report-preview">
-                <img src="images/report.webp" alt="Пример отчёта из Looker Studio" class="report-image" loading="lazy" width="1940" height="1134">
+            <!-- Modal for full-size report image -->
+            <div id="reportModal" class="report-modal" onclick="closeReportModal()">
+                <span class="report-modal-close">&times;</span>
+                <img class="report-modal-content" id="reportModalImg" src="images/report.webp" alt="Full Reporting Dashboard">
             </div>
         </div>
     </section>
