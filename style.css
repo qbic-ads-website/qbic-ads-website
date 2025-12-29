@@ -1249,6 +1249,12 @@ section {
     height: 2px;
     background: linear-gradient(90deg, transparent, #00d4ff, transparent);
     box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+    transition: width 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover .service-header::after {
+    width: 120px;
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.8);
 }
 
 .service-icon {
