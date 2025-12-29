@@ -100,15 +100,7 @@ img {
     decoding: async;
 }
 
-/* Desktop 90% zoom effect - only for screens wider than 768px */
-@media (min-width: 769px) {
-    body {
-        transform: scale(0.9);
-        transform-origin: top center;
-        width: 111.111%; /* Компенсация для центрирования после scale(0.9) */
-        margin-left: -5.556%; /* Центрирование: (111.111% - 100%) / 2 */
-    }
-}
+/* Desktop styles - removed problematic scale(0.9) transform */
 
 .container {
     max-width: 1300px;
@@ -396,14 +388,15 @@ img {
 .lang-dropdown::before {
     content: '';
     position: absolute;
-    top: -4px;
-    left: 0;
-    right: 0;
-    height: 4px;
+    top: -8px;
+    left: -10px;
+    right: -10px;
+    height: 8px;
     background: transparent;
 }
 
 .lang-switcher:hover .lang-dropdown,
+.lang-dropdown:hover,
 .lang-dropdown.active {
     display: flex;
 }
@@ -619,12 +612,13 @@ img {
 }
 
 .hero-post {
-    max-width: 100%;
+    max-width: 90%; /* Уменьшено на 10% */
     height: auto;
-    max-height: 442px; /* Увеличено на 26% (350 * 1.26) */
+    max-height: 398px; /* Уменьшено на 10% от 442px */
     object-fit: contain;
     margin-top: -30px; /* Немного поднято для компактности */
-    margin-right: 40px; /* Сдвинуто левее */
+    margin-right: 20px; /* Сдвинуто ещё левее */
+    margin-left: -20px; /* Дополнительный сдвиг влево */
     /* Animation removed for LCP optimization */
 }
 
@@ -633,7 +627,8 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    margin-top: 30px;
+    margin-top: 10px; /* Приподнято вверх с 30px до 10px */
+    margin-left: -30px; /* Сдвинуто влево */
     /* Animation removed for LCP optimization */
 }
 
@@ -665,10 +660,11 @@ img {
 }
 
 .hero-badges {
-    max-width: 400px;
+    max-width: 352px; /* Увеличено на 10% от 320px (320 * 1.1) */
     height: auto;
-    max-height: 140px;
+    max-height: 123px; /* Увеличено на 10% от 112px (112 * 1.1) */
     object-fit: contain;
+    transform: translateX(-8%); /* Сдвинуто правее: было -15%, теперь -8% (-15% + 7%) */
 }
 
 .visual-card {
@@ -1176,7 +1172,7 @@ section {
     background: rgba(100, 228, 232, 0.1);
     border: 1px solid #64E4E8;
     border-radius: 8px;
-    padding: 12px 20px;
+    padding: 4px 12px;
     color: #64E4E8;
     font-weight: 600;
     display: flex;
@@ -1211,8 +1207,11 @@ section {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 20px;
+    padding: 30px;
     transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:nth-child(even) {
@@ -1233,17 +1232,34 @@ section {
 .service-header {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.service-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
 }
 
 .service-icon {
     flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-icon {
-    transform: translateX(3px) scale(1.1);
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-title {
@@ -1251,15 +1267,29 @@ section {
     font-weight: 700;
     color: #64E4E8;
     margin: 0;
+    text-align: center;
+}
+
+.service-icon svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.15) rotate(5deg);
+    opacity: 0.7;
 }
 
 .service-description {
-    font-size: 16px;
-    color: var(--text-secondary);
-    line-height: 1.6;
+    font-size: 18px;
+    color: #D0D0DC;
+    line-height: 1.8;
     margin: 0;
     text-align: center;
-}
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Process Section */
@@ -1827,7 +1857,7 @@ section {
 }
 
 .pricing-description {
-    font-size: 12px;
+    font-size: 15px;
     color: var(--text-secondary);
     margin-bottom: 14px;
     line-height: 1.4;
@@ -1839,7 +1869,7 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 8px 12px;
-    font-size: 10px;
+    font-size: 14px;
     color: var(--text-muted);
     margin-bottom: 16px;
     text-align: center;
@@ -1869,7 +1899,7 @@ section {
 .pricing-features li {
     padding: 8px 0;
     color: var(--text-secondary);
-    font-size: 12px;
+    font-size: 16px;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -2018,7 +2048,7 @@ section {
 
 .audit-benefit p {
     color: var(--text-muted);
-    font-size: 12px;
+    font-size: 18px;
     line-height: 1.4;
 }
 
