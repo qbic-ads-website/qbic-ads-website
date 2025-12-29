@@ -1430,7 +1430,7 @@ section {
 }
 
 .process-description {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-secondary);
     line-height: 1.6;
     margin: 0;
@@ -2861,7 +2861,7 @@ select.form-input {
     }
 
     .process-description {
-        font-size: 13px;
+        font-size: 15px;
         grid-column: 2; /* Описание справа внизу */
         grid-row: 2;
     }
