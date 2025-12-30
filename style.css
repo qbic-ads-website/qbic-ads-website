@@ -1890,14 +1890,14 @@ section {
 }
 
 .pricing-amount {
-    font-size: 16px;
+    font-size: 28px;
     font-weight: 800;
     color: #4fc3f7;
     white-space: pre-wrap;
 }
 
 .pricing-period {
-    font-size: 11px;
+    font-size: 16px;
     color: var(--text-muted);
 }
 
@@ -3068,7 +3068,7 @@ select.form-input {
     }
 
     .pricing-amount {
-        font-size: 20px !important;
+        font-size: 32px !important;
     }
 
     .pricing-period {
@@ -3124,7 +3124,7 @@ select.form-input {
     }
 
     .pricing-amount {
-        font-size: 36px;
+        font-size: 40px;
     }
 
     .messenger-links {
