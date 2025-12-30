@@ -2676,14 +2676,6 @@ select.form-input {
         max-height: calc(100dvh - 150px) !important;
     }
 
-    /* Scale down content to fit in viewport */
-    .service-card,
-    .benefit-card,
-    .pricing-card {
-        transform: scale(0.9);
-        margin: -5% 0;
-    }
-
     /* Make section titles more compact */
     .section-title {
         font-size: 24px !important;
@@ -2698,6 +2690,19 @@ select.form-input {
     .section-subtitle-framed {
         font-size: 12px !important;
         padding: 3px 10px !important;
+    }
+
+    /* Reduce card padding to fit more content */
+    .service-card,
+    .benefit-card,
+    .pricing-card {
+        padding: 16px !important;
+    }
+
+    .service-description,
+    .benefit-description {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
     }
 
     /* Мобильное меню - скрыто по умолчанию */
