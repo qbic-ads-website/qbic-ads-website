@@ -1909,7 +1909,8 @@ section {
 .pricing-features li {
     padding: 8px 0;
     color: var(--text-secondary);
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.4;
     border-bottom: 1px solid var(--border-color);
 }
 
