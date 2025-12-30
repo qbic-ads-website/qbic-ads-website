@@ -1195,12 +1195,16 @@ section {
 /* Services Section */
 .services {
     background: var(--section-bg);
+    overflow: visible;
+    height: auto;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
+    overflow: visible;
+    height: auto;
 }
 
 .service-card {

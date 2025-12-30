@@ -15,7 +15,21 @@
       "Bash(npx terser:*)",
       "Bash(sort:*)",
       "Bash(sips:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(perl -i -pe:*)",
+      "Bash(for img in post.webp badges.webp cube.webp googleads.webp)",
+      "Bash(do identify -format \"$img: %wx%h\\\\n\" $img)",
+      "Bash(done)",
+      "Bash(for lang in ru en ua)",
+      "Bash(do echo \"Checking $lang.json...\")",
+      "Bash(npx csso-cli:*)",
+      "Bash(find:*)",
+      "Bash(for img in images/post.webp images/badges.webp images/post-mobile.webp images/badges-mobile.webp)",
+      "Bash(do sips -g pixelWidth -g pixelHeight \"$img\")",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
