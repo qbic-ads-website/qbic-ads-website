@@ -1085,13 +1085,13 @@ img {
 
 .btn-outline {
     background: transparent;
-    color: var(--primary-color);
+    color: #ffffff;
     border: 2px solid var(--primary-color);
 }
 
 .btn-outline:hover {
     background: var(--primary-color);
-    color: var(--dark-bg);
+    color: #ffffff;
 }
 
 .btn-outline-telegram {
@@ -1843,7 +1843,7 @@ section {
 }
 
 .pricing-title {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 800;
     margin-bottom: 8px;
     color: #4fc3f7;
