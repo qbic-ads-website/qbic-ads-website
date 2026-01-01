@@ -208,6 +208,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
+
+            // Close mobile menu after clicking a link
+            const nav = document.querySelector('.nav');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            if (nav && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.classList.remove('active');
+                }
+            }
         }
     });
 });
