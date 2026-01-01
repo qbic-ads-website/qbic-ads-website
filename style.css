@@ -2605,7 +2605,25 @@ select.form-input {
     transition-delay: calc(var(--animation-order, 0) * 0.15s);
 }
 
+/* Desktop: hide mobile text, show desktop text */
+.audit-benefit-title-mobile {
+    display: none;
+}
+
+.audit-benefit-title-desktop {
+    display: inline;
+}
+
 @media (max-width: 768px) {
+    /* Mobile: hide desktop text, show mobile text */
+    .audit-benefit-title-desktop {
+        display: none;
+    }
+
+    .audit-benefit-title-mobile {
+        display: inline;
+    }
+
     /* Normal scrolling - no snap */
     body {
         width: 100%;
