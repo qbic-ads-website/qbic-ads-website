@@ -218,6 +218,7 @@ img {
     background: var(--primary-color);
     border: none;
     cursor: pointer;
+    display: none; /* Hidden by default, shown via JS when scrolled */
 }
 
 .floating-btn.whatsapp {
