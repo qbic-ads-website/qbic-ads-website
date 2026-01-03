@@ -3357,7 +3357,7 @@ select.form-input {
 .team-cta-text {
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: var(--primary-color);
     margin: 0 0 24px 0;
 }
 
