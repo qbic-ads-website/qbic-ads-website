@@ -252,9 +252,9 @@ window.addEventListener('scroll', () => {
     const scrollTopBtn = document.querySelector('.scroll-top');
     if (scrollTopBtn) {
         if (currentScroll > 300) {
-            scrollTopBtn.style.display = 'flex';
+            scrollTopBtn.classList.remove('hidden');
         } else {
-            scrollTopBtn.style.display = 'none';
+            scrollTopBtn.classList.add('hidden');
         }
     }
 

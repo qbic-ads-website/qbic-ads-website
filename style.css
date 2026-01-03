@@ -218,8 +218,10 @@ img {
     background: var(--primary-color);
     border: none;
     cursor: pointer;
-    display: none !important; /* Hidden by default, shown via JS when scrolled */
-    opacity: 0; /* Also set opacity to 0 to override animation */
+}
+
+.floating-btn.scroll-top.hidden {
+    display: none !important;
 }
 
 .floating-btn.whatsapp {
