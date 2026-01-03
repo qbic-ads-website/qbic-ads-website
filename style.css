@@ -3274,9 +3274,12 @@ select.form-input {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(0, 212, 255, 0.2);
     border-radius: 16px;
-    padding: 24px;
+    padding: 32px 24px;
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
     transition: all 0.3s ease;
     opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
@@ -3305,18 +3308,18 @@ select.form-input {
 }
 
 .team-card-image img {
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(0, 212, 255, 0.3);
+    border: 3px solid rgba(0, 212, 255, 0.3);
 }
 
 .team-card-content {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 100%;
 }
 
 .team-member-name {
@@ -3384,15 +3387,12 @@ select.form-input {
     }
 
     .team-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
+        padding: 24px 20px;
     }
 
     .team-card-image img {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
 
     .team-member-name {
