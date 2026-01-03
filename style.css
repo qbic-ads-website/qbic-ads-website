@@ -3297,6 +3297,10 @@ select.form-input {
     animation-delay: 0.3s;
 }
 
+.team-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
 .team-card:hover {
     transform: translateY(-8px);
     border-color: var(--primary-color);
