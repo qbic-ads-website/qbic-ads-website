@@ -171,8 +171,14 @@
   "team.member1.role": "Head of PPC",
   "team.member1.description": "Експерт в управлінні рекламними кампаніями з великими бюджетами. Спеціалізується на е-commerce проектах та масштабуванні Google Ads.",
   "team.member2.name": "Анна",
-  "team.member2.role": "Senior PPC спеціаліст",
+  "team.member2.role": "Lead PPC Strategist",
   "team.member2.description": "Спеціалізується на лідогенерації на європейських ринках. Експерт в оптимізації воронок конверсії та зниженні вартості ліда.",
+  "team.member3.name": "Сергій",
+  "team.member3.role": "Senior PPC спеціаліст",
+  "team.member3.description": "Експерт в управлінні високобюджетними рекламними кампаніями. Спеціалізується на е-commerce проектах, сегментації товарів та систематичному масштабуванні Google Ads. Веде освітній канал про стратегії Google Ads.",
+  "team.member4.name": "Тетяна",
+  "team.member4.role": "SMM & Content Manager",
+  "team.member4.description": "Керує контент-стратегією та соціальними мережами агентства. Веде Telegram та YouTube канали, створює освітній контент про Google Ads. Перетворює складні PPC стратегії на зрозумілі матеріали.",
   "team.cta.text": "Хочете більше інсайтів про PPC та Google Ads?",
   "team.cta.button": "Читати наш PPC-блог в Telegram"
 }

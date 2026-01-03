@@ -1122,6 +1122,42 @@ img {
     width: 100%;
 }
 
+/* Contact CTA Button */
+.contact-telegram-cta {
+    margin: 20px 0;
+}
+
+.contact-cta-text {
+    font-size: 16px;
+    margin: 0;
+    color: #ffffff;
+    line-height: 1.5;
+    display: inline;
+}
+
+.contact-cta-btn {
+    background: #0088cc;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.contact-cta-btn:hover {
+    background: #006699;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+}
+
 /* Sections */
 section {
     padding: 70px 0;
