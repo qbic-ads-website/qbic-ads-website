@@ -3265,8 +3265,8 @@ select.form-input {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
     margin-top: 48px;
 }
 
@@ -3376,6 +3376,14 @@ select.form-input {
 
 .team-cta-btn svg {
     flex-shrink: 0;
+}
+
+/* Tablet responsive for team section */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
 /* Mobile responsive for team section */
