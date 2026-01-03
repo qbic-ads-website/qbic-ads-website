@@ -251,11 +251,16 @@ window.addEventListener('scroll', () => {
     // Show/hide scroll to top button
     const scrollTopBtn = document.querySelector('.scroll-top');
     if (scrollTopBtn) {
+        console.log('Scroll position:', currentScroll, 'Button classes:', scrollTopBtn.classList.toString());
         if (currentScroll > 300) {
             scrollTopBtn.classList.remove('hidden');
+            console.log('Showing button - classes after:', scrollTopBtn.classList.toString());
         } else {
             scrollTopBtn.classList.add('hidden');
+            console.log('Hiding button - classes after:', scrollTopBtn.classList.toString());
         }
+    } else {
+        console.log('Scroll-top button not found!');
     }
 
     lastScroll = currentScroll;
