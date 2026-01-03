@@ -3252,3 +3252,174 @@ select.form-input {
         font-size: 36px;
     }
 }
+
+/* ============================================
+   Team Section
+   ============================================ */
+
+.team {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1425 0%, #2a2438 100%);
+    position: relative;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.team-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.team-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.team-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 32px rgba(0, 212, 255, 0.2);
+}
+
+.team-card-image {
+    flex-shrink: 0;
+}
+
+.team-card-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+.team-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.team-member-name {
+    font-family: 'Teachers', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.team-member-role {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.team-member-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 8px 0 0 0;
+}
+
+/* Team CTA */
+.team-cta {
+    margin-top: 64px;
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 212, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.team-cta-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 24px 0;
+}
+
+.team-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.team-cta-btn svg {
+    flex-shrink: 0;
+}
+
+/* Mobile responsive for team section */
+@media (max-width: 768px) {
+    .team {
+        padding: 60px 0;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 32px;
+    }
+
+    .team-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .team-card-image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .team-member-name {
+        font-size: 20px;
+    }
+
+    .team-member-role {
+        font-size: 14px;
+    }
+
+    .team-member-description {
+        font-size: 13px;
+    }
+
+    .team-cta {
+        margin-top: 48px;
+        padding: 24px;
+    }
+
+    .team-cta-text {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .team-cta-btn {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+}
