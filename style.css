@@ -219,8 +219,8 @@ img {
     border: none;
     cursor: pointer;
     display: flex;
-    opacity: 1;
-    animation: none;
+    opacity: 1 !important;
+    animation: none !important;
 }
 
 .floating-btn.scroll-top.hidden {
