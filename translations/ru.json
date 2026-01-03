@@ -166,9 +166,13 @@
     "footer.company": "Компания",
     "footer.contacts": "Контакты",
     "footer.copyright": "© 2025 QBIC Ads. Все права защищены.",
+    "team.title": "Наша Команда",
     "team.member1.name": "Сергей",
     "team.member1.role": "Senior PPC специалист",
     "team.member1.description": "Эксперт в управлении рекламными кампаниями с большими бюджетами. Специализируется на е-commerce проектах и масштабировании Google Ads.",
+    "team.member2.name": "Анна",
+    "team.member2.role": "Senior PPC специалист",
+    "team.member2.description": "Специализируется на лидогенерации на европейских рынках. Эксперт в оптимизации воронок конверсии и снижении стоимости лида.",
     "team.cta.text": "Хотите больше инсайтов о PPC и Google Ads?",
     "team.cta.button": "Читать наш PPC-блог в Telegram"
 }
