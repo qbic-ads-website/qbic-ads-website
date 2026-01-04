@@ -1122,17 +1122,12 @@ img {
     width: 100%;
 }
 
-/* Contact CTA Button */
-.contact-telegram-cta {
-    margin: 20px 0;
-}
-
-.contact-cta-text {
+/* Contact Blog Text */
+.contact-blog-text {
     font-size: 16px;
     margin: 0;
-    color: #ffffff;
+    color: #64E4E8;
     line-height: 1.5;
-    display: inline;
 }
 
 .contact-cta-btn {
