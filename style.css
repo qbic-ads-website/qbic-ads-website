@@ -2947,7 +2947,7 @@ select.form-input {
 
     /* Уменьшаем hero визуализацию на мобильных */
     .hero-visual {
-        height: 250px;
+        height: 125px;
     }
 
     .hero-post {
