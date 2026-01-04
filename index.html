@@ -20,6 +20,9 @@
     <!-- Preload CSS -->
     <link rel="preload" href="style.min.css?v=149" as="style">
 
+    <!-- Preload LCP image for mobile -->
+    <link rel="preload" href="images/badges-mobile.webp?v=3" as="image" media="(max-width: 768px)" fetchpriority="high">
+
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,12 +34,16 @@
     <link rel="stylesheet" href="style.min.css?v=149">
 </head>
 <body>
-    <!-- Google Tag Manager - loads async, doesn't block render -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K42ZX5LH');</script>
+    <!-- Google Tag Manager - deferred load -->
+    <script>
+    window.addEventListener('load', function() {
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K42ZX5LH');
+    });
+    </script>
     <!-- End Google Tag Manager -->
 
     <!-- Google Tag Manager (noscript) -->
